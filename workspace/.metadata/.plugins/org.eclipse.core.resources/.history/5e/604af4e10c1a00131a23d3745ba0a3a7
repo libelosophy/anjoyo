@@ -1,0 +1,71 @@
+<html >
+	<head>
+		<title>html webpages</title>
+	</head>
+	
+	<body bgcolor="#F5F5DC" background="background.jpg">
+			<a id="top1"></a>
+			<a name="top2"></a>
+			<h1>h1 <u>1</u>
+			</h1>
+			<p>p</p>
+			<center>
+				<p>
+					<font size="5" color="CornflowerBlue">
+					center 
+					</font>
+					<sub>sub</sub> 
+				</p>
+				<p>
+					<a href="http://www.w3school.com.cn/html/html_colornames.asp">
+					ref:http://www.w3school.com.cn/html/html_colornames.asp
+					</a>
+				</p>
+			</center>
+
+			<h2>Head 2</h2>
+			<p>
+				<font size="6" >
+					<b>b b b</b> </br>
+					<u> u u u</u> </br>
+					<i>i i i</i> </br>		
+				</font>
+			</p>
+
+			<h3>H3</h3>
+			<p> hello</br>
+				<img src="baidu_logo.jpg">
+					</br>baidu logo
+					</br></br>
+				</img>
+				hello</br>
+				<a href="http://image.baidu.com/i?tn=download&word=download&ie=utf8&fr=detail&url=http%3A%2F%2Fimgcdn.zcool.com.cn%2Fimg2%2Fcover%2F30%2F14%2Fb_1318336539183.jpg" >
+					<img 
+					src="http://image.baidu.com/i?tn=download&word=download&ie=utf8&fr=detail&url=http%3A%2F%2Fimgcdn.zcool.com.cn%2Fimg2%2Fcover%2F30%2F14%2Fb_1318336539183.jpg">
+					</img>
+				</a>
+			</p>
+
+			<h4>h4</h4>
+			<p>
+				<ul> list
+				<li>Coffee</li>
+				<li>Milk</li>
+				</ul>
+			</p>
+			<p>
+				<a href="page2.html">
+					<font size="8" color="red">page2<font>
+				</a>
+			</p>
+	<body>
+	
+	<a href="table.html">To table </a>
+
+	</br></br></br></br></br></br></br></br></br>
+
+	<a href="#top1">  id</a>
+	<a href="#top2"> name</a>
+
+
+</html>

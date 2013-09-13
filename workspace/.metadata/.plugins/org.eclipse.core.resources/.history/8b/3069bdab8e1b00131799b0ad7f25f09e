@@ -1,0 +1,40 @@
+package com.jh.tablehost;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.app.DatePickerDialog.OnDateSetListener;
+import android.view.Menu;
+import android.widget.DatePicker;
+import android.widget.TabHost;
+import android.widget.Toast;
+
+public class TableHostDemo extends Activity implements OnDateSetListener{
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_table_host_demo);
+		
+		TabHost tabhost = new TabHost(this);
+		
+		tabhost.findViewById(android.R.id.tabhost);
+		tabhost.setup();
+		
+		tabhost.
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.table_host_demo, menu);
+		return true;
+	}
+
+	@Override
+	public void onDateSet(DatePicker view, int year, int monthOfYear,
+			int dayOfMonth) {
+		Toast.makeText(this, "Hello tabhost", Toast.LENGTH_SHORT);
+	}
+	
+
+}

@@ -1,0 +1,11 @@
+package com.jh.thread.communicate;
+
+public class Test {
+
+	public Test() {
+		// TODO Auto-generated constructor stub
+	}
+
+	
+
+}

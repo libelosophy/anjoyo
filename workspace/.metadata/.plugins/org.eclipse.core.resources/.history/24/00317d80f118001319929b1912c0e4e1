@@ -1,0 +1,84 @@
+package com.jh.androiddemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+
+
+
+// 安卓 Acitity 的 生命周期
+
+public class Lanucher extends Activity {
+
+	static final String TAG_TEST = "mainActivity";
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.lanucher, menu);
+		return true;
+	}
+
+	
+	/* 1. OnCreate 数据初始化  */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_lanucher);
+		
+		// Log : verbose /info /debug /warn /error /assert
+		Log.i(TAG_TEST, "onCreate");
+	}
+	
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		Log.i(TAG_TEST, "onStart");
+	}
+	
+	
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		Log.i(TAG_TEST, "onRestart");
+	}
+	
+	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		Log.i(TAG_TEST, "onPause");
+	}
+	
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Log.i(TAG_TEST, "onResume");
+	}
+	
+	
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		Log.i(TAG_TEST, "onStop");
+	}
+	
+	
+	// 
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		Log.i(TAG_TEST, "onDestroy");
+	}
+	
+	
+}

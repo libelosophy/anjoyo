@@ -1,0 +1,60 @@
+package com.jh.andoriddemo;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.SimpleAdapter;
+
+public class SimpleAdapterDEMO extends Activity {
+
+	private static final String NAME = "NAME";
+	private static final String ICON = "ICON";
+	private static final String OK = "SUBMIT";
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.adapter_layout_all);
+		
+		// 
+		ArrayList<Map<String,Object>>  data = new ArrayList<Map<String,Object>>();
+		
+		Map<String,Object> map = new HashMap<String, Object>();
+		
+		
+		
+		
+		
+		String[] from = {
+				NAME,
+				ICON,
+				OK				
+		};
+		int[] to = {
+				R.id.name_Tv,
+				R.id.icon_Iv,
+				R.id.ok_Btn
+		};
+		
+		SimpleAdapter adapter = new SimpleAdapter(this, 
+				data,
+				R.layout.activity_simple_adapter_demo,
+				from, 
+				to
+				);
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.simple_adapter_demo, menu);
+		return true;
+	}
+
+}

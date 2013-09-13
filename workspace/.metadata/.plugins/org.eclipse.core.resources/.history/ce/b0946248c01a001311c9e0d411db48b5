@@ -1,0 +1,116 @@
+package com.jh.andoriddemo;
+
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Gallery;
+import android.widget.ImageView;
+
+public class GalleryDemo extends Activity {
+
+	private Gallery gallery ;
+	
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_gallery);
+		
+		gallery = new Gallery(this);
+		gallery = (Gallery)findViewById(R.id.imageview_gallery);
+		
+		Integer[] imageResource= {
+				R.drawable.ic_launcher,
+				R.drawable.ic_launcher,
+				R.drawable.ic_launcher,
+				R.drawable.ic_launcher	
+		};
+		
+		GalleryAdapter adapter = new GalleryAdapter(
+				this, 
+				R.layout.activity_gallery,
+				R.id.imageview_gallery,
+				imageResource
+				);
+		gallery.setAdapter(adapter);
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.gallery, menu);
+		return true;
+	}
+
+}
+
+
+class GalleryAdapter extends BaseAdapter{
+
+	private int mResource;
+	private Context mContext;
+	private int mImageViewResourceId;
+	private LayoutInflater mInflater;
+	Integer[] data;
+	
+	static class ViewHolder{
+		ImageView image;	
+		
+	}
+	
+	public GalleryAdapter( Context context, int resource , int imageViewResourceId,Integer[] imageData) {
+
+		mContext = context;
+		mResource = resource;
+		mImageViewResourceId = imageViewResourceId;
+		mInflater = LayoutInflater.from(context);
+		data = imageData; 
+	}
+	
+	@Override
+	public int getCount() {
+		
+		return data.length;
+	}
+
+	@Override
+	public Object getItem(int position) {
+
+		return data[position];
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		ViewHolder holder = null;
+		if(convertView == null){
+			holder = new ViewHolder();
+
+			convertView = mInflater.inflate(mResource, null);
+			
+			holder.image = (ImageView) convertView.findViewById(mImageViewResourceId);
+			convertView.setTag(holder);
+		}
+		holder.image.setImageDrawable( mContext.getResources().getDrawable(data[position]));
+		
+		
+		return convertView;
+	}
+	
+	
+	
+	
+}

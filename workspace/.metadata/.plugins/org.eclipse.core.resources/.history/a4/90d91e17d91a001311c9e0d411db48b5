@@ -1,0 +1,36 @@
+package com.jh.androidlistview;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ListView;
+
+public class ListViewDemo extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_list_view_demo);
+		
+		List<String> list = new ArrayList<String>();
+		list.add("hello");
+		list.add("hello");
+		list.add("hello");
+		
+		ListView listView = new Listview(this);
+		listView = findViewById(R.id.listview);
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.list_view_demo, menu);
+		return true;
+	}
+
+}

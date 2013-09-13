@@ -1,0 +1,108 @@
+package com.jh.androidlistview;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.ContextMenu.ContextMenuInfo;
+import android.widget.Button;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+public class SimpleAdapterDemo extends Activity {
+	
+	private SimpleAdapter adapter;
+	private static final String ICON = "icon";
+	private static final String NAME = "name";
+	private static final String BTN = "btn";
+	private static final String CHECK = "checked";
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_list_view_demo);
+//      (Context context, 
+//      List<? extends Map<String, ?>> data,
+//      		int resource, 
+//      		String[] from, 
+//      		int[] to)
+
+//     ImageView icon = new ImageView(this);
+//     icon.setImageURI(Uri.parse("file:///android_asserts/ic_launcher"));
+      
+      List<Map<String, Object>> data = new ArrayList<Map<String, Object>>(); 
+      Button btn = new Button(this);
+      btn.setText("");
+      
+      
+      for(int i=0; i< 20; i++){
+      	HashMap<String, Object> map = new HashMap<String,Object>();
+	        map.put(ICON , R.drawable.ic_launcher);
+	        map.put(NAME, "name " + i);
+//	        btn.setText("btn" + i);
+	        map.put(BTN, "btn" + i);
+	        if(i%2 == 0){
+	        	map.put(CHECK, true);
+	        }else{
+	        	map.put(CHECK, false);
+	        }
+	        data.add(map);
+	    }
+      
+      
+      int resource = R.layout.activity_simple_adapter;
+      
+      String[] from = {
+      		ICON,
+      		NAME,
+      		CHECK,
+      		BTN        		
+      };
+      		
+      int[] to = {
+      		R.id.simple_adapter_image,
+      		R.id.simple_adapter_text,
+      		R.id.simple_adapter_checkbox,
+      		R.id.simple_adapter_button        		
+      };
+      
+      adapter = new SimpleAdapter(this, data, resource, from, to);
+      
+      ListView listView = new ListView(this);
+      listView = (ListView)findViewById(R.id.listview);
+      listView.setAdapter(adapter);
+
+      registerForContextMenu(listView);
+		
+	}
+
+	@Override
+	public void onCreateContextMenu(ContextMenu menu, View v,
+			ContextMenuInfo menuInfo) {
+		// TODO Auto-generated method stub
+		super.onCreateContextMenu(menu, v, menuInfo);
+	}
+	
+	
+	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		return super.onContextItemSelected(item);
+	}
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.test, menu);
+		return true;
+	}
+
+}

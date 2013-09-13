@@ -1,0 +1,14 @@
+---
+title:
+
+
+author:
+---
+
+android 中的 Adapter
+------------------
+1. Adapter 是什么？
+	Adapter 是 AdapterView 和 data 之间的桥梁。
+	-+++++++-				-++++++++-
+	+ View  +  --> Adapter  + Data   +
+	-+++++++-               -++++++++-

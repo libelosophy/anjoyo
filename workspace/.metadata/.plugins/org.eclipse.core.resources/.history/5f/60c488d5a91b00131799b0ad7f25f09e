@@ -1,0 +1,28 @@
+---
+title:
+
+
+author:
+---
+
+android 中的 Adapter
+------------------
+1. Adapter 是什么？
+* Adapter 是 _AdapterView_ 和 data 之间的桥梁。
+	-+++++++-				     -++++++++-
+	+ View  +  <--> Adapter <--> +  Data  +
+	-+++++++-                    -++++++++-
+作用：
+	* 1. Adapter 负责为数据集中的每一个 item 建立一个 View
+	* 2. 从 View 访问数据
+
+问题：
+1. view 需要什么数据？
+2. 数据用什么存储？
+3. 怎么设置数据？
+4. 
+
+
+Adapter ：
+1. DataObserver 什么，有什么用？怎么注册？ --> 具体实现
+2. 

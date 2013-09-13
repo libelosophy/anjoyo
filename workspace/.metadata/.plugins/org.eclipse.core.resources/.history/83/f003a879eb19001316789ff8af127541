@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <RelativeLayout 
+        android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_centerHorizontal="true"
+    	android:layout_centerVertical="true"
+    	>
+    <TextView 
+        android:id="@+id/user_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user"
+        
+        android:layout_alignParentTop="true"
+        android:layout_alignBottom="@id/user_Et"
+        
+        android:gravity="center_vertical"
+        />
+    
+    <EditText 
+        android:id="@+id/user_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tips_user"
+        
+        android:layout_toRightOf="@id/user_Tv"
+        />
+    
+    <TextView 
+        android:id="@+id/passwd_Tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/passwd"
+        
+        android:layout_below="@id/user_Tv"
+        android:layout_alignBottom="@id/passwd_Et"
+         
+        android:gravity="center_vertical"
+        />
+
+    <EditText 
+        android:id="@+id/passwd_Et"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/tips_passwd"
+        
+        android:layout_toRightOf="@id/passwd_Tv"
+        android:layout_below="@id/user_Et"
+        
+        android:layout_alignLeft="@id/user_Et"
+        android:layout_alignRight="@id/user_Et"
+        />
+
+    <Button 
+        android:id="@+id/submit_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/ok"
+        
+        android:layout_below="@id/passwd_Tv"      
+        />
+    
+    <Button 
+        android:id="@+id/cancel_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/cancel"
+        
+
+        
+        android:layout_toRightOf="@id/submit_Btn"
+        android:layout_below="@id/passwd_Et"
+        />
+
+	</RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>HTML Layout</title>
+<meta name="author" content="jh">
+
+</head>
+<hr />
+
+
+<table name="table test">
+<tr>
+	<th>表头1</th>
+	<th>table header</th>
+</tr>
+<tr>
+	<td>单元格1</td>
+	<td>单元格2</td>
+</tr>
+
+
+
+</table>
+
+
+
+
+
+
+
+
+
+</html>

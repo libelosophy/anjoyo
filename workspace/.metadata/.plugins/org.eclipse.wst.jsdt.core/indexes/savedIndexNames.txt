@@ -1,0 +1,6 @@
+INDEX VERSION 1.122+E:\PortableGit-1.8.3-preview20130601\workspace\anjoyo\workspace\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3547026198.index
+2804783987.index
+172662042.index
+3517917901.index
+1757889726.index

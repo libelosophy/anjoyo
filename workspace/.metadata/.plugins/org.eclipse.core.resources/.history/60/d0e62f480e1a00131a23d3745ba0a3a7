@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="sytlesheet" type="text/css" href="./mystyle.css" />
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p style="name"> this is a paragraph.</p>
+
+</body>
+</html>

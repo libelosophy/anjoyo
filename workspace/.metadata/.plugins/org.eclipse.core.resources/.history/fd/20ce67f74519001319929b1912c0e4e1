@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTML Layout</title>
+<meta name="author" content="jh">
+
+</head>
+
+<h1> HTML Layout </h1>
+<body>
+<hr />
+
+
+	<table border="1" align="center"> Table test
+		<tr>
+			<th>table header 1</th>
+			<th>table header 2</th>
+		</tr>
+		<tr>
+			<td>unit 1</td>
+			<td>unit 2</td>
+		</tr>
+	</table>
+	
+	<h4> portrait table </h4>
+	<table border="1">
+		<tr>
+			<th> table header1</th>
+			<td colspan="2" align="center"> content 1</td>
+			<td rowspan ="3"> content 3</td>
+		</tr>
+	
+		<tr>
+			<th rowspan="2"> table header2</th>
+			<td> content 1</td>
+			<td> content 2</td>
+			
+		</tr>
+		<tr>
+			<td> unit 1 </td>
+			<td> unit 2 </td>
+		</tr>
+		
+	</table>
+
+	<form action="提交到服务器的哪个页面" method="POST|GET">
+		<table>
+			<tr>
+				<td> reciever name:</td>
+				<td> 
+					<input type="text" name="name" size="20"/> Input u name
+				</td>
+			</tr>
+		
+			<tr>
+				<td> Age: </td>
+				<td> 
+					<input type="number" name="age" size="20"/> Input u age.
+				</td>
+			</tr>
+			
+			<tr>
+				<td> Gender: </td>
+				<td> 
+					<input type="checkbox" name="gender_male" size="20"/>male
+					<input type="checkbox" name="gender_female" size="20"/>female
+				</td>
+			</tr>
+			
+			<tr>
+				<td> Area: </td>
+				<td> 
+					<select>
+						<option> data to recieve </option>
+
+					</select>
+				</td>
+			</tr>
+
+		</table>
+	</form>
+
+
+</body>
+</html>

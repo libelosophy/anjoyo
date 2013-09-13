@@ -1,0 +1,3 @@
+INDEX VERSION 1.126
+E:\workspace\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2838306697.index
+\QTalk\src

@@ -1,0 +1,80 @@
+package com.jh.androidlistview;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import android.app.Activity;
+import android.content.Context;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ListView;
+import android.widget.SimpleAdapter;
+
+//An easy adapter to map static data to views defined 
+//	in an XML file. You can specify the data backing the 
+//	list as an ArrayList of Maps. Each entry in the 
+//	ArrayList corresponds to one row in the list. The 
+//	Maps contain the data for each row. 
+// You also specify 
+//	an XML file that defines the views used to display 
+//	the row, and a mapping from keys in the Map to specific
+//	views. Binding data to views occurs in two phases. 
+//	First, if a SimpleAdapter.ViewBinder(???) is available,
+//	setViewValue(android.view.View, Object, String) is 
+//	invoked. If the returned value is true, binding has 
+//	occurred. If the returned value is false,
+//	the following views are then tried in order:
+
+
+
+public class SimpleAdapterDemo extends Activity {
+	
+	private SimpleAdapter adapter ;
+	
+	
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_simple_adapter);
+//        (Context context, 
+//        List<? extends Map<String, ?>> data,
+//        		int resource, 
+//        		String[] from, 
+//        		int[] to)
+
+
+        Context context = this;
+        List<HashMap<String, Object>> data = new ArrayList<HashMap<String, Object>>(); 
+        int resource = R.layout.activity_simple_adapter;
+        
+        String[] from = {
+        		ICON,
+        		NAME,
+        		BTN        		
+        };
+        		
+        int[] to = {
+        		R.id.simple_adapter_image,
+        		R.id.simple_adapter_text,
+        		R.id.simple_adapter_button        		
+        };
+        
+        adapter = new SimpleAdapter(context, data, resource, from, to);
+        
+        ListView listView = new ListView(this);
+        listView = (ListView)findViewById(R.id.listview);
+        listView.setAdapter(adapter);
+        
+        
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.simple_adapter, menu);
+        return true;
+    }
+    
+}

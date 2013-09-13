@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;SharePreferenceDemo&apos;&#x0D;&#x0A;- Original project: &apos;SharePreferenceDemo&apos;&#x0D;&#x0A;- Original element: &apos;activity_share_preference_demo.xml&apos;" description="Delete element" element1="res/layout/activity_share_preference_demo.xml" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1379037101984" subPackages="false" version="1.0"/>
+</session>

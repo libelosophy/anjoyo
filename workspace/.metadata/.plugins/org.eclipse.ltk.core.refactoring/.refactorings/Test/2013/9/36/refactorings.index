@@ -1,0 +1,23 @@
+1378263769796	Encapsulate field 'accountNo'
+1378263775421	Encapsulate field 'name'
+1378264044937	Encapsulate field 'DrawMoney'
+1378264175843	Encapsulate field 'Account'
+1378264264906	Encapsulate field 'drawMoney'
+1378264269328	Encapsulate field 'account'
+1378264298125	Encapsulate field 'balance'
+1378265025453	Encapsulate field 'accountNo'
+1378265028765	Encapsulate field 'name'
+1378265038250	Encapsulate field 'balance'
+1378265184234	Encapsulate field 'drawMoney'
+1378265188203	Encapsulate field 'account'
+1378265663312	Rename compilation unit 'DrawAccount.java'
+1378279355531	Rename type 'Run'
+1378279360781	Rename type 'Rundemo'
+1378279878515	Encapsulate field 'repo'
+1378281774140	Delete element
+1378281776078	Delete element
+1378281778078	Delete element
+1378287090406	Delete element
+1378343087015	Rename type 'UdpDemo'
+1378369707218	Extract method 'JDBCBasic'
+1378431723203	Extract method 'addStudent'

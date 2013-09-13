@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".DialogDemo" >
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hello_world" />
+    
+    
+    <Button
+        android:id="@+id/dialog_trigger_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/dialog_trigger_tips"     
+        android:layout_below="@id/hello"
+         android:onClick="onClick"
+        />
+     <Button
+        android:id="@+id/mydialog_trigger_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/mydialog_trigger_tips"     
+        android:layout_below="@id/dialog_trigger_btn"
+        android:onClick="onClick"
+        />
+      <Button
+        android:id="@+id/progress_trigger_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/progress_trigger_tips"     
+        android:layout_below="@id/mydialog_trigger_btn"
+        android:onClick="onClick"
+        />
+      
+       <Button
+        android:id="@+id/datapick_trigger_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/datapick_trigger_tips"     
+        android:layout_below="@id/progress_trigger_btn"
+        android:onClick="onClick"
+        />
+
+</RelativeLayout>

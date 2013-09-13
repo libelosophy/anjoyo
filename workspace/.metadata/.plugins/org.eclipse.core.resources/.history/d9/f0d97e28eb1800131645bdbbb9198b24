@@ -1,0 +1,31 @@
+package com.jh.androiddemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.util.Log;
+import android.view.Menu;
+
+public class Lanucher extends Activity {
+
+	
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.lanucher, menu);
+		return true;
+	}
+
+	
+	/* 1. OnCreate 数据初始化  */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_lanucher);
+		
+		// Log : verbose /info /debug /warn /error /assert
+		Log.println(priority, tag, msg)
+	}
+	
+	
+}

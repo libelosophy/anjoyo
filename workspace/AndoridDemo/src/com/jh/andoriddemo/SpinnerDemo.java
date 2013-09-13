@@ -1,0 +1,46 @@
+package com.jh.andoriddemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.database.DataSetObserver;
+import android.view.Menu;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
+import android.widget.TextView;
+
+public class SpinnerDemo extends Activity {
+	private Spinner spinner = null;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_spinner_demo);
+		spinner = new Spinner(this);
+		spinner = (Spinner)findViewById(R.id.spinner);
+		
+		TextView textView = new TextView(this);
+		textView.setText("test");
+		
+		ArrayAdapter<String>  adapter = new ArrayAdapter<String>(
+				this, 
+				android.R.layout.simple_spinner_item   // ??????
+				);
+		adapter.setDropDownViewResource(				// ??????
+				android.R.layout.simple_dropdown_item_1line);
+		adapter.add(new String("item1"));
+		adapter.add(new String("item2"));
+		adapter.add(new String("item3"));
+		
+		spinner.setAdapter(adapter);
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		getMenuInflater().inflate(R.menu.spinner_demo, menu);
+		return true;
+	}
+
+}

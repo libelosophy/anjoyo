@@ -1,0 +1,94 @@
+package com.jh.andoriddemo;
+
+import java.util.List;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+// 实现一个 ArrayAdapter
+public class UserDefinedApapter<T> extends BaseAdapter {
+
+	private Context mContext;
+	private int mResource;
+	private LayoutInflater mInflater;
+	private int mTextViewResourceId;
+	List<T> objects;
+
+	public UserDefinedApapter(Context context, int resource,
+			int textViewResourceId, List<T> objects) {
+
+		mContext = context;
+		mInflater = (LayoutInflater) context
+				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+		mResource = resource;
+		mTextViewResourceId = textViewResourceId;
+		this.objects = objects;
+
+	}
+
+	//
+	@Override
+	public int getCount() {
+		return objects.size();
+	}
+
+	@Override
+	public T getItem(int position) {
+
+		return objects.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+
+		return position;
+	}
+	
+	// ViewHolder  缓存数据
+	
+	
+	
+	
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+
+		View v ;
+		if (convertView == null) {
+			v =  mInflater.inflate(mResource, null);
+		} else {
+			v = convertView;
+		}
+		TextView textView = (TextView) v;
+		T item = getItem(position);
+		if (item instanceof CharSequence) {
+			textView.setText((CharSequence) item);
+		} else {
+			textView.setText(item.toString());
+		}
+		return v;
+
+//		View view;
+//		TextView text;
+//
+//		if (convertView == null) {
+//			view = mInflater.inflate(mResource, null);
+//		} else {
+//			view = convertView;
+//		}
+//		text = (TextView) view;
+//		T item = getItem(position);
+//		if (item instanceof CharSequence) {
+//			text.setText((CharSequence) item);
+//		} else {
+//			text.setText(item.toString());
+//		}
+//		return view;
+	}
+
+}
+

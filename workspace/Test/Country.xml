@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coutry_info>
+	<countrise>
+		<country>
+			<name>China</name>
+			<scale>Huge</scale>
+			<where>Asia</where>
+		</country>
+		<country>
+			<name>America</name>
+			<scale>Small</scale>
+			<where>
+			    I don't know
+			    </where>
+		</country>
+		<country>
+			<name>Korea</name>
+			<scale>little</scale>
+			<where>Asia</where>
+		</country>
+	</countrise>
+</coutry_info>

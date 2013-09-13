@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;NoteWithMD/Readme.md&apos; to &apos;Android_Readme.md&apos;" description="Rename resource &apos;Readme.md&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Readme.md" name="Android_Readme.md" stamp="1378860880812" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;NoteWithMD/2013-09-10-android.md&apos; to &apos;2013-09-10-android-Adapter.md&apos;" description="Rename resource &apos;2013-09-10-android.md&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="2013-09-10-android.md" name="2013-09-10-android-Adapter.md" stamp="1378988225875" updateReferences="true"/>
+</session>

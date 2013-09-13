@@ -1,0 +1,53 @@
+package com.jh.andoriddemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.Menu;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class AdaterDemo extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.adapter_layout_all);
+		
+		// 适配器
+//		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.user_define_listview,R.id.list_user_define); 
+		Log.d("TAG", "here 0");
+		// 数据
+		List<String> arrayList = new ArrayList<String>() ;
+		for(int i=0; i<5000; i++){
+		arrayList.add("pig");
+		arrayList.add("dog");
+		arrayList.add("cat");
+		}
+		
+		Log.d("TAG", "here 1");
+//		adapter.addAll(arrayList);
+		UserDefinedApapter<String> adapter = new UserDefinedApapter<String>(this,
+				R.layout.user_define_listview,		// TextView layout file
+				R.id.list_user_define, // TextView id
+				arrayList);
+		Log.d("TAG", "here 2");
+		// 视图
+		ListView listView = null;
+		listView = (ListView)findViewById(R.id.listview);
+		listView.setAdapter(adapter);
+		Log.d("TAG", "here 3");
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.adapter_demo, menu);
+		return true;
+	}
+
+}

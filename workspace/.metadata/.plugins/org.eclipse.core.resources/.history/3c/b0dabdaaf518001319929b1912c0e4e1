@@ -1,0 +1,107 @@
+package com.jh.androiddemo;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.content.Intent;
+import android.util.Log;
+import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+
+
+
+// 安卓 Activity 的 生命周期
+// 启动： onCreate --> onStart(visible) --> onResume(visible) 
+// HOME 键： --> onPause --> onStop  
+// ...HOME + : -->onRestart --> onResume()   
+// HOME: onPause(part visible) -->onStop 
+// ...HOME + ->:  --> onDestory 
+public class Lanucher extends Activity {
+
+	static final String TAG_TEST = "mainActivity";
+
+	private Button bt = null;
+	
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.lanucher, menu);
+		return true;
+	}
+
+	
+	/* 1. OnCreate 数据初始化  */
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_lanucher);
+		
+		bt = (Button) this.findViewById(R.id.button1);
+		bt.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(Lanucher.this, SayHello.class);
+				startActivity(intent);
+			}
+		});
+		
+		
+		// Log : verbose /info /debug /warn /error /assert
+		Log.i(TAG_TEST, "Lanucher onCreate");
+	}
+	
+	
+	@Override
+	protected void onStart() {
+		// TODO Auto-generated method stub
+		super.onStart();
+		Log.i(TAG_TEST, "Lanucher onStart");
+	}
+	
+	
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		Log.i(TAG_TEST, "Lanucher onRestart");
+	}
+	
+	
+	@Override
+	protected void onPause() {
+		// TODO Auto-generated method stub
+		super.onPause();
+		Log.i(TAG_TEST, "Lanucher onPause");
+	}
+	
+	
+	@Override
+	protected void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+		Log.i(TAG_TEST, "Lanucher onResume");
+	}
+	
+	
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		Log.i(TAG_TEST, "Lanucher onStop");
+	}
+	
+	
+	// 
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		Log.i(TAG_TEST, "Lanucher onDestroy");
+	}
+	
+	
+	
+	
+}

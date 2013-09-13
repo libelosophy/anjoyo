@@ -1,0 +1,57 @@
+package com.jh.andoriddemo;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.ListView;
+
+public class AdaterDemo extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.adapter_layout_all);
+		
+		// 适配器
+//		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.user_define_listview); 
+		
+		// 数据
+		List<String> arrayList = new ArrayList<String>() ;
+		arrayList.add("pig");
+		arrayList.add("dog");
+		arrayList.add("cat");
+		
+
+//		adapter.addAll(arrayList);
+		UserDefinedApapter<String> adapter = null;
+		try {
+			adapter = new UserDefinedApapter<String>(this,
+					R.layout.user_define_listview,
+					android.R.layout.simple_list_item_1,
+				
+					arrayList);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.out.println("!!!!!!!! ERROR ");
+		}
+
+		// 视图
+		ListView listView = null;
+		listView = (ListView)findViewById(R.id.listview);
+		listView.setAdapter(adapter);
+		
+		
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.adapter_demo, menu);
+		return true;
+	}
+
+}

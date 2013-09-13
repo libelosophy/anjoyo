@@ -1,0 +1,40 @@
+package com.jh.androidlistview;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+//An easy adapter to map static data to views defined 
+//	in an XML file. You can specify the data backing the 
+//	list as an ArrayList of Maps. Each entry in the 
+//	ArrayList corresponds to one row in the list. The 
+//	Maps contain the data for each row. 
+// You also specify 
+//	an XML file that defines the views used to display 
+//	the row, and a mapping from keys in the Map to specific
+//	views. Binding data to views occurs in two phases. 
+//	First, if a SimpleAdapter.ViewBinder(???) is available,
+//	setViewValue(android.view.View, Object, String) is 
+//	invoked. If the returned value is true, binding has 
+//	occurred. If the returned value is false,
+//	the following views are then tried in order:
+
+
+
+public class SimpleAdapter extends Activity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_simple_adapter);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.simple_adapter, menu);
+        return true;
+    }
+    
+}

@@ -1,0 +1,42 @@
+<html>
+<head>
+<title>HTML Layout</title>
+<meta name="author" content="jh">
+
+</head>
+
+<h1> HTML Layout </h1>
+<body>
+<hr />
+
+
+	<table border="1" align="center"> Table test
+		<tr>
+			<th>table header 1</th>
+			<th>table header 2</th>
+		</tr>
+		<tr>
+			<td>unit 1</td>
+			<td>unit 2</td>
+		</tr>
+	</table>
+	
+	<h4> portrait table </h4>
+	<table border="1">
+		<tr>
+			<th> table header1</th>
+			<td> content 1</td>
+			<td> content 2</td>
+		</tr>
+	
+		<tr>
+			<th> table header2</th>
+			<td> content 1</td>
+			<td> content 2</td>
+			<td> content 3</td>
+		</tr>
+	</table>
+
+
+</body>
+</html>
